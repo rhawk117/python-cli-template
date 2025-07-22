@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "python-cli-template"
+version = "0.1.0"
+description = "A python CLI template for a simple CLI app"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+app = "app_name:main"
+
+
+[tool.uv]
+package = true
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["app_name"]
